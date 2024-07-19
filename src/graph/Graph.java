@@ -1,8 +1,11 @@
+package graph;
+
 import java.util.*;
 
 public class Graph {
     public static void main(String[] args) {
-        graphWithHashMap();
+//        graphWithHashMap();
+        graphWithAdjacencyList();
     }
 
     public static void graphWithHashMap() {
@@ -36,18 +39,14 @@ public class Graph {
     public static void graphWithAdjacencyList() {
         Scanner sc = new Scanner(System.in);
         List<Character> listOfVertices = new ArrayList<>();
-        //  [A,B,C,D,E]
-        for (int i = 0; i < 5; i++) {
+        //  [A,B,C,D,E,F]
+        for (int i = 0; i < 6; i++) {
             listOfVertices.add((char) ('A' + i));
         }
 
         List<List<Integer>> listOfEdges = new ArrayList<>();
         /* Iterating each node to store their connected edges
-            [B,C]
-            [D,E]
-            [B,E]
-            [A]
-            [B,A]
+
         */
         for (int i = 0; i < listOfVertices.size(); i++) {
             List<Integer> edges = new LinkedList<>();
